@@ -1,0 +1,19 @@
+{
+  "name": "nodexec-commands",
+  "version": "1.0.0",
+  "description": "Commands for nodexec",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmaximilian/nodexec-commands.git"
+  },
+  "author": "Maximilian Beck <contact@maximilianbeck.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bmaximilian/nodexec-commands/issues"
+  },
+  "homepage": "https://github.com/bmaximilian/nodexec-commands#readme"
+}
