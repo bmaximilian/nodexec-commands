@@ -4,7 +4,7 @@
   "description": "Commands for nodexec",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/nyc ./node_modules/.bin/mocha './**/**/*.spec.js'"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,47 @@
   "bugs": {
     "url": "https://github.com/bmaximilian/nodexec-commands/issues"
   },
-  "homepage": "https://github.com/bmaximilian/nodexec-commands#readme"
+  "nyc": {
+    "check-coverage": true,
+    "per-file": false,
+    "lines": 80,
+    "statements": 90,
+    "functions": 90,
+    "branches": 70,
+    "reporter": [
+      "lcov",
+      "text-summary",
+      "html"
+    ],
+    "include": [
+      "./src/**/*.js"
+    ],
+    "extension": [
+      ".js"
+    ],
+    "cache": true,
+    "all": true,
+    "report-dir": "./coverage"
+  },
+  "homepage": "https://github.com/bmaximilian/nodexec-commands#readme",
+  "devDependencies": {
+    "@types/chai": "^4.1.4",
+    "@types/chalk": "^2.2.0",
+    "@types/lodash": "^4.14.116",
+    "@types/mocha": "^5.2.5",
+    "chai": "^4.1.2",
+    "coveralls": "^3.0.2",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-plugin-chai-friendly": "^0.4.1",
+    "eslint-plugin-import": "^2.14.0",
+    "mocha": "^5.2.0",
+    "nyc": "^13.0.1"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "inquirer": "^6.2.0",
+    "lodash": "^4.17.10"
+  }
 }
